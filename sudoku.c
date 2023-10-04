@@ -137,7 +137,7 @@ Node* DFS(Node* initial, int* cont)
         {
           Node* adj_node = front(adj_nodes);
           popFront(adj_nodes);
-          push(stack, adj_nodes);
+          push(stack, adj_node);
         }
       free(adj_nodes);
       free(nodoActual);

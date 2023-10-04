@@ -99,3 +99,15 @@ sudoku.c:151:5: note: previous definition of ‘main’ with type ‘int(int,  c
 cc1: all warnings being treated as errors
 Compilation failed
 010eab9
+Wed 04 Oct 2023 04:58:35 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+test.c:245:5: error: redefinition of ‘main’
+  245 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+sudoku.c:151:5: note: previous definition of ‘main’ with type ‘int(int,  char **)’
+  151 | int main( int argc, char *argv[] )
+      |     ^~~~
+Compilation failed
+1131226
