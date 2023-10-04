@@ -47,6 +47,7 @@ int is_valid(Node* n)
 {
     int filaVerificada[9][9] = {0};
     int columnaVerificada[9][9] = {0};
+    int subMatrizVerificada[9][9] = {0};
 
     for (int i = 0 ; i < 9 ; i++)
       {
@@ -65,6 +66,13 @@ int is_valid(Node* n)
                 return 0;
               }
               columnaVerificada[j][numero] = 1;
+              int sub_i = i / 3;
+              int sub_j = j / 3;
+              if (subMatrizVerificada[sub_i][sub_j][numero] == 1)
+              {
+                return 0;
+              }
+              subMatrizVerificada[sub_i][sub_j][numero] == 1;
             }
           }
       }

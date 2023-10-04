@@ -123,3 +123,20 @@ Wed 04 Oct 2023 05:01:45 PM UTC:
  tests:  4|3
 total_score: 30/70
 f991d79
+Wed 04 Oct 2023 05:04:17 PM UTC: 
+ sudoku.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:71:52: error: subscripted value is neither array nor pointer nor vector
+   71 |               if (subMatrizVerificada[sub_i][sub_j][numero] == 1)
+      |                                                    ^
+sudoku.c:75:48: error: subscripted value is neither array nor pointer nor vector
+   75 |               subMatrizVerificada[sub_i][sub_j][numero] == 1;
+      |                                                ^
+sudoku.c:50:9: error: variable ‘subMatrizVerificada’ set but not used [-Werror=unused-but-set-variable]
+   50 |     int subMatrizVerificada[9][9] = {0};
+      |         ^~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0e4f641
