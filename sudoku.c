@@ -138,7 +138,7 @@ Node* DFS(Node* initial, int* cont)
       (*cont)++;
       if (is_final(nodoActual))
       {
-        free(stack);
+        clean(stack);
         return nodoActual;
       }
       List* adj_nodes = get_adj_nodes(nodoActual);
@@ -148,7 +148,7 @@ Node* DFS(Node* initial, int* cont)
           popFront(adj_nodes);
           push(stack, adj_node);
         }
-      free(adj_nodes);
+      clean(adj_nodes);
       free(nodoActual);
     }
   
