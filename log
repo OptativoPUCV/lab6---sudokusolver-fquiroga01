@@ -1,0 +1,24 @@
+Wed 04 Oct 2023 04:50:47 PM UTC: 
+ sudoku.c | 98 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 89 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:89:17: error: implicit declaration of function ‘pushback’; did you mean ‘pushBack’? [-Werror=implicit-function-declaration]
+   89 |                 pushback(list, adj_node);
+      |                 ^~~~~~~~
+      |                 pushBack
+sudoku.c: In function ‘DFS’:
+sudoku.c:135:17: error: unused variable ‘adj_node’ [-Werror=unused-variable]
+  135 |           Node* adj_node = front(adj_nodes);
+      |                 ^~~~~~~~
+test.c: At top level:
+test.c:245:5: error: redefinition of ‘main’
+  245 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+sudoku.c:148:5: note: previous definition of ‘main’ with type ‘int(int,  char **)’
+  148 | int main( int argc, char *argv[] )
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ecf1033
