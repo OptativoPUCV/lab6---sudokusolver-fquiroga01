@@ -72,7 +72,7 @@ int is_valid(Node* n)
               {
                 return 0;
               }
-              subMatrizVerificada[sub_i][sub_j][numero] == 1;
+              subMatrizVerificada[sub_i][sub_j][numero] = 1;
             }
           }
       }
