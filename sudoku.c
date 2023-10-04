@@ -82,16 +82,19 @@ List* get_adj_nodes(Node* n)
           {
             if (n->sudo[i][j] == 0)
             {
-              Node* adj_node = copy(n);
-              adj_node->sudo[i][j] = i;
-              if (is_valid(adj_node))
-              {
-                pushBack(list, adj_node);
-              }
-              else
-              {
-                free(adj_node);
-              }
+              for (int k = 0 ; k <= 9 ; k++)
+                {
+                  Node* adj_node = copy(n);
+                  adj_node->sudo[i][j] = i;
+                  if (is_valid(adj_node))
+                  {
+                    pushBack(list, adj_node);
+                  }
+                  else
+                  {
+                    free(adj_node);
+                  }
+                }
             }
           }
       }
